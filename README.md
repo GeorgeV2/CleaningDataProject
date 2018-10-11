@@ -1,7 +1,7 @@
 # CleaningDataProject
 Project for Coursera Getting and Cleaning Data
 
-The 'CodeBook.md' file decsribes the describes the variables, the data, and any transformations or work that you performed to clean up the data. 
+The "CodeBook.md" file decsribes the describes the variables, the data, and any transformations or work that you performed to clean up the data. 
 
 The 'run_analysis.r' file contains the code used to do the following:
 
