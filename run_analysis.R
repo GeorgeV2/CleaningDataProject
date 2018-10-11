@@ -58,11 +58,10 @@ names(big_data) <- gsub("std", "StandardDeviation", names(big_data))
 names(big_data) <- gsub("iqr", "InterquartileRange", names(big_data))
 
 
-# 5. Create independent tidy data w/ avg of each variable
+# 5. Create independent tidy data with average of each variable
 
 library(plyr)
-
-tidy_data <- aggregate(. ~ subjectId + activityId, activity_names, mean)
+tidy_data <- aggregate(. ~ subjectId + activityId, big_data, mean)
 tidy_data <- tidy_data[order(tidy_data$subjectId, tidy_data$activityId), ]
 write.table(tidy_data, "tidy_data.txt")
 
