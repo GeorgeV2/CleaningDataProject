@@ -63,7 +63,7 @@ names(big_data) <- gsub("iqr", "InterquartileRange", names(big_data))
 library(plyr)
 tidy_data <- aggregate(. ~ subjectId + activityId, big_data, mean)
 tidy_data <- tidy_data[order(tidy_data$subjectId, tidy_data$activityId), ]
-write.table(tidy_data, "tidy_data.txt")
+write.table(tidy_data, "tidy_data.txt", row.name = FALSE)
 
 
 
